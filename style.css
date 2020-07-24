@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-red-color: #f11c1f;
+}
+
+.main-red-color {
+  color: var(--main-red-color);
+}
+
 html {
   font-size: 10px;
 }
@@ -11,7 +19,7 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
-  background-color: #2d2d2d;
+  background-color: #26292d;
   height: 100vh;
 }
 
@@ -25,7 +33,7 @@ body.html {
 .container {
   width: 600px;
   height: 600px;
-  background-color: #f2eecb;
+  background-color: #feb575;
   border-radius: 4px;
   padding: 32px;
 }
@@ -33,4 +41,27 @@ body.html {
 .frame {
   border: 1px solid #484848;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-title {
+  flex: auto;
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.header-btn {
+  font-size: 1.5rem;
+  background: unset;
+  border: unset;
+  outline: unset;
+  padding: 24px;
+  font-family: "Bungee", cursive;
 }
