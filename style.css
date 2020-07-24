@@ -26,13 +26,12 @@ body {
 body.html {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Gloria Hallelujah", cursive;
 }
 
 .container {
   width: 600px;
-  height: 600px;
+  height: 800px;
   background-color: #feb575;
   border-radius: 4px;
   padding: 32px;
@@ -62,6 +61,40 @@ body.html {
   background: unset;
   border: unset;
   outline: unset;
-  padding: 24px;
+  padding: 16px;
   font-family: "Bungee", cursive;
+  cursor: pointer;
+}
+
+.add {
+  padding: 16px;
+}
+
+.add-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-input {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
+  flex: auto;
+  border-bottom: 1px solid var(--main-red-color);
+  outline: unset;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 16px;
+  text-transform: lowercase;
+}
+
+.add-btn {
+  font-size: 1.8rem;
+  font-family: "Bungee", cursive;
+  padding: 16px;
+  padding-right: unset;
+  padding-top: unset;
+  cursor: pointer;
+  background: unset;
+  outline: unset;
+  border: unset;
 }
