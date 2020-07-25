@@ -1,0 +1,242 @@
+<<<<<<< HEAD
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-red-color: #f11c1f;
+    --main-black-color: #26292d;
+}
+
+.main-red-color {
+    color: var(--main-red-color);
+}
+
+.main-black-color {
+    color: var(--main-black-color);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: var(--main-black-color);
+}
+
+body.html {
+    margin: 0;
+    padding: 0;
+    font-family: "Gloria Hallelujah", cursive;
+}
+
+.container {
+    width: 600px;
+    height: 800px;
+    background-color: #feb575;
+    border-radius: 4px;
+    padding: 32px;
+}
+
+.frame {
+    border: 1px solid var(--main-black-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-title {
+    flex: auto;
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: "Gloria Hallelujah", cursive;
+}
+
+.header-btn {
+    font-size: 2rem;
+    background: unset;
+    border: unset;
+    outline: unset;
+    padding: 16px;
+    font-family: "Bungee", cursive;
+    cursor: pointer;
+}
+
+.header.btn.main-black-color:active {
+    text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.header.btn.main-red-color:active {
+    text-shadow: 1px 1px 2px var(--main-red-color);
+}
+
+.add {
+    padding: 16px;
+}
+
+.add-form {
+    display: flex;
+    align-items: flex-start;
+}
+
+.add-input {
+    background: unset;
+    border: unset;
+    padding: 0 64px;
+    flex: auto;
+    border-bottom: 1px solid var(--main-red-color);
+    outline: unset;
+    font-family: "Gloria Hallelujah", cursive;
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+.add-btn {
+    font-size: 1.8rem;
+    font-family: "Bungee", cursive;
+    padding: 16px;
+    padding-right: unset;
+    padding-top: unset;
+    cursor: pointer;
+    background: unset;
+    outline: unset;
+    border: unset;
+}
+
+.add-btn.main-black-color:active {
+    text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo {
+    position: relative;
+    flex: auto 0 auto;
+    min-height: 36px;
+    margin: 16px 0 0;
+    font-family: "Gloria Hallelujah", cursive;
+    font-size: 24px;
+    border-bottom: 1px solid var(--main-black-color);
+    text-align: center;
+}
+
+.todo-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+=======
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-red-color: #f11c1f;
+}
+
+.main-red-color {
+  color: var(--main-red-color);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #26292d;
+  height: 100vh;
+}
+
+body.html {
+  margin: 0;
+  padding: 0;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.container {
+  width: 600px;
+  height: 800px;
+  background-color: #feb575;
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.frame {
+  border: 1px solid #484848;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-title {
+  flex: auto;
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.header-btn {
+  font-size: 1.5rem;
+  background: unset;
+  border: unset;
+  outline: unset;
+  padding: 16px;
+  font-family: "Bungee", cursive;
+  cursor: pointer;
+}
+
+.add {
+  padding: 16px;
+}
+
+.add-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-input {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
+  flex: auto;
+  border-bottom: 1px solid var(--main-red-color);
+  outline: unset;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 16px;
+  text-transform: lowercase;
+}
+
+.add-btn {
+  font-size: 1.8rem;
+  font-family: "Bungee", cursive;
+  padding: 16px;
+  padding-right: unset;
+  padding-top: unset;
+  cursor: pointer;
+  background: unset;
+  outline: unset;
+  border: unset;
+}
+>>>>>>> parent of 35f4896... section todolist text
