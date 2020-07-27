@@ -1,18 +1,9 @@
 import React from "react";
 import "./App.css";
-import Paper from "./Components/Paper";
-import Header from "./Components/Header";
-import TodoForm from "./Components/TodoForm";
-import Todos from "./Components/Todos";
+import TodoList from "./Pages/TodoList";
 
 function App() {
-  return (
-    <Paper>
-      <Header />
-      <TodoForm />
-      <Todos />
-    </Paper>
-  );
+  return <TodoList />;
 }
 
 export default App;

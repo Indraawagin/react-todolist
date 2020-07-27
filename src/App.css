@@ -55,7 +55,7 @@ body.html {
 }
 
 .header-title {
-  flex: auto;
+  flex: 1;
   text-align: center;
   font-size: 3.6rem;
   font-family: "Gloria Hallelujah", cursive;
@@ -92,7 +92,7 @@ body.html {
   background: unset;
   border: unset;
   padding: 0 64px;
-  flex: auto;
+  flex: 1;
   border-bottom: 1px solid var(--main-red-color);
   outline: unset;
   font-family: "Gloria Hallelujah", cursive;
@@ -119,12 +119,13 @@ body.html {
 .todos {
   display: flex;
   flex-direction: column;
+  min-height: 500px;
 }
 
 .todo {
   position: relative;
-  flex: auto 0 auto;
-  min-height: 36px;
+  flex: 1 0 auto;
+  max-height: 34px;
   margin: 16px 0 0;
   font-family: "Gloria Hallelujah", cursive;
   font-size: 24px;
@@ -133,6 +134,8 @@ body.html {
 }
 
 .todo-text {
+  width: 100%;
+  height: 50px;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
