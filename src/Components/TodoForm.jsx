@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const Todoform = ({ addTodo }) => {
+const Todoform = (props) => {
   const [inputState, setInputState] = useState("");
 
   const handleFormSumbit = (event) => {
@@ -12,8 +12,7 @@ const Todoform = ({ addTodo }) => {
       return;
     }
 
-    addTodo(inputState);
-    alert(inputState);
+    props.addTodo(inputState);
     setInputState("");
   };
 

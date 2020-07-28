@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 const Todos = (props) => {
   return (
     <section className="todos">
-      {props.todos.map((todo) => {
-        return <Todo text={todo.text} />;
+      {props.todos.map((todo, index) => {
+        return <Todo key={index} text={todo.text} />;
       })}
     </section>
   );
