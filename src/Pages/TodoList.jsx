@@ -7,9 +7,9 @@ import Todos from "../Components/Todos";
 const TodoList = (props) => {
   //TODO: Hooks Todo List
   const [todos, setTodos] = useState([
-    { text: "Learning React" },
-    { text: "Learning React Hooks" },
-    { text: "Learning styling in React" },
+    { text: "Learning React", isComplete: false },
+    { text: "Learning React Hooks", isComplete: false },
+    { text: "Learning styling in React", isComplete: false },
   ]);
 
   //TODO: Hooks Show Add Todo Form
@@ -20,9 +20,16 @@ const TodoList = (props) => {
     if (todos.length >= 10) {
       alert("MaximumTodos");
     } else {
-      const addedTodo = [...todos, { text: value }];
+      const addedTodo = [...todos, { text: value, isComplete: false }];
       setTodos(addedTodo);
     }
+  };
+
+  // todo: completeTodo={completeTodo}
+  const completeTodo = (index) => {
+    const addedTodo = [...todos];
+    addedTodo[index].isComplete = !addedTodo[index].isComplete;
+    setTodos(addedTodo);
   };
 
   //Todo: <Header showAddToogle={showAddToggle} />
@@ -38,13 +45,13 @@ const TodoList = (props) => {
     );
   }
 
-  console.log("Todos", todos);
+  console.log("CompleteTodo", todos);
 
   return (
     <Paper>
       <Header showAddToogle={showAddToggle} showAdd={showAdd} />
       {addForm}
-      <Todos todos={todos} />
+      <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
   );
 };
