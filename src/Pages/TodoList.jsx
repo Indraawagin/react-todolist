@@ -17,8 +17,12 @@ const TodoList = (props) => {
 
   //TODO: <TodoForm addTodo={addTodo} />
   const addTodo = (value) => {
-    const addedTodo = [...todos, { text: value }];
-    setTodos(addedTodo);
+    if (todos.length >= 10) {
+      alert("MaximumTodos");
+    } else {
+      const addedTodo = [...todos, { text: value }];
+      setTodos(addedTodo);
+    }
   };
 
   //Todo: <Header showAddToogle={showAddToggle} />
@@ -33,6 +37,8 @@ const TodoList = (props) => {
       </div>
     );
   }
+
+  console.log("Todos", todos);
 
   return (
     <Paper>

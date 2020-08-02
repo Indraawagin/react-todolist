@@ -18,5 +18,6 @@ const Header = (props) => {
 
 Header.propTypes = {
   showAddToogle: PropTypes.func.isRequired,
+  showAdd: PropTypes.bool.isRequired,
 };
 export default Header;
