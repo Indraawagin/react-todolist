@@ -8,7 +8,7 @@ const Header = (props) => {
         className="header-btn main-black-color"
         onClick={props.showAddToogle}
       >
-        Add
+        {props.showAdd ? "FINISHED" : "ADD"}
       </button>
       <h1 className="header-title">Todo List</h1>
       <button className="header-btn main-red-color">Clear</button>

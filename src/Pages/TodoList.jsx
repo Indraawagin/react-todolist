@@ -36,7 +36,7 @@ const TodoList = (props) => {
 
   return (
     <Paper>
-      <Header showAddToogle={showAddToggle} />
+      <Header showAddToogle={showAddToggle} showAdd={showAdd} />
       {addForm}
       <Todos todos={todos} />
     </Paper>
