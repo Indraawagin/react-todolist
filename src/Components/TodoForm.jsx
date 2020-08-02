@@ -2,19 +2,24 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const Todoform = (props) => {
+  // todo : Hook Input
   const [inputState, setInputState] = useState("");
 
   const handleFormSumbit = (event) => {
     event.preventDefault();
-
     if (!inputState) {
-      alert("No Blank Todo");
+      alert("No Blank Todo!");
       return;
     }
-
     props.addTodo(inputState);
     setInputState("");
   };
+
+  if (inputState.length > 40) {
+    setInputState("");
+    alert("Please create a shorter todo text!");
+    return;
+  }
 
   return (
     <section className="add">
