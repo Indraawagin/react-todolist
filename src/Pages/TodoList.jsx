@@ -32,6 +32,10 @@ const TodoList = (props) => {
     setTodos(addedTodo);
   };
 
+  const clearTodo = () => {
+    setTodos([]);
+  };
+
   //Todo: <Header showAddToogle={showAddToggle} />
   const showAddToggle = () => setShowAdd(!showAdd);
 
@@ -49,7 +53,11 @@ const TodoList = (props) => {
 
   return (
     <Paper>
-      <Header showAddToogle={showAddToggle} showAdd={showAdd} />
+      <Header
+        showAddToogle={showAddToggle}
+        showAdd={showAdd}
+        clearTodo={clearTodo}
+      />
       {addForm}
       <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>

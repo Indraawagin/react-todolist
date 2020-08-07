@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const Todoform = (props) => {
   // todo : Hook Input
   const [inputState, setInputState] = useState("");
+
+  // todo: ref={inputFocus}
+  const inputFocus = useRef(null);
+  useEffect(() => {
+    inputFocus.current.focus();
+  });
 
   const handleFormSumbit = (event) => {
     event.preventDefault();
@@ -25,6 +31,7 @@ const Todoform = (props) => {
     <section className="add">
       <form action="" className="add-form" onSubmit={handleFormSumbit}>
         <input
+          ref={inputFocus}
           type="text"
           className="add-input"
           value={inputState}

@@ -11,7 +11,9 @@ const Header = (props) => {
         {props.showAdd ? "FINISHED" : "ADD"}
       </button>
       <h1 className="header-title">Todo List</h1>
-      <button className="header-btn main-red-color">Clear</button>
+      <button onClick={props.clearTodo} className="header-btn main-red-color">
+        Clear
+      </button>
     </section>
   );
 };
@@ -19,5 +21,6 @@ const Header = (props) => {
 Header.propTypes = {
   showAddToogle: PropTypes.func.isRequired,
   showAdd: PropTypes.bool.isRequired,
+  clearTodo: PropTypes.func.isRequired,
 };
 export default Header;
