@@ -33,7 +33,7 @@ const TodoList = (props) => {
   };
 
   const clearTodo = () => {
-    setTodos([]);
+    !showAdd && setTodos([]);
   };
 
   //Todo: <Header showAddToogle={showAddToggle} />
