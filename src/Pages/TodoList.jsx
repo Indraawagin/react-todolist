@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Paper from "../Components/Paper";
-import Header from "../Components/Header";
-import TodoForm from "../Components/TodoForm";
-import Todos from "../Components/Todos";
+import Paper from "../Components/paper/Paper";
+import Header from "../Components/header/Header";
+import TodoForm from "../Components/todoForm/TodoForm";
+import Todos from "../Components/todos/Todos";
 
 const TodoList = (props) => {
   //TODO: Hooks Todo List

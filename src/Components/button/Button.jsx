@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./button.module.css";
 
 const Button = (props) => {
   const className = [
-    "header-btn",
-    props.color === "black" && "main-black-color",
-    props.color === "red" && "main-red-color",
+    styles.headerBtn,
+    props.color === "black" && styles.mainBlackColor,
+    props.color === "red" && styles.mainRedColor,
   ].join(" ");
 
   return (

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
+import styles from "./TodoForm.module.css";
 
 const Todoform = (props) => {
   // todo : Hook Input
@@ -28,16 +29,16 @@ const Todoform = (props) => {
   }
 
   return (
-    <section className="add">
-      <form action="" className="add-form" onSubmit={handleFormSumbit}>
+    <section className={styles.add}>
+      <form action="" className={styles.addForm} onSubmit={handleFormSumbit}>
         <input
           ref={inputFocus}
           type="text"
-          className="add-input"
+          className={styles.addInput}
           value={inputState}
           onChange={(event) => setInputState(event.target.value)}
         />
-        <button className="add-btn main-black-color">Add</button>
+        <button className={styles.addBtn}>Add</button>
       </form>
     </section>
   );
