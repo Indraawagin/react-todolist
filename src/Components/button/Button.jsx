@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./button.module.css";
+import * as styles from "./button.styles";
+// import styles from "./button.module.css";
 
-const Button = (props) => {
-  const className = [
-    styles.headerBtn,
-    props.color === "black" && styles.mainBlackColor,
-    props.color === "red" && styles.mainRedColor,
-  ].join(" ");
+const Button = ({ color, onClick, text }) => {
+  // const className = [
+  //   styles.headerBtn,
+  //   props.color === "black" && styles.mainBlackColor,
+  //   props.color === "red" && styles.mainRedColor,
+  // ].join(" ");
 
   return (
-    <button className={className} onClick={props.onClick}>
-      {props.text}
+    <button css={styles.button({ color })} onClick={onClick}>
+      {text}
     </button>
   );
 };
