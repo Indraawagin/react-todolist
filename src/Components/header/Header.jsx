@@ -1,16 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Button from "../button/Button";
-import styles from "./Header.module.css";
+// import styles from "./Header.module.css";
+import * as styles from "./header.styles";
 
 const Header = (props) => {
   return (
-    <section className={styles.header}>
+    <section css={styles.header}>
       <Button
         onClick={props.showAddToogle}
         text={props.showAdd ? "FINISHED" : "ADD"}
       />
-      <h1 className={styles.headerTitle}>Todo List</h1>
+      <h1 css={styles.headerTitle}>Todo List</h1>
       <Button onClick={props.clearTodo} text="Clear" color="red" />
     </section>
   );
