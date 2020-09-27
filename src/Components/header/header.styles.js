@@ -7,8 +7,9 @@ export const header = () => {
   `;
 };
 
-export const headerTitle = () => {
+export const headerTitle = ({ theme }) => {
   return css`
+    color: ${theme.color.primary.black};
     flex: 1;
     text-align: center;
     font-size: 3.6rem;

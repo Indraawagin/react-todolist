@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as styles from "./button.styles";
 // import styles from "./button.module.css";
+import { useTheme } from "emotion-theming";
 
 const Button = ({ color, onClick, text }) => {
   // const className = [
@@ -10,8 +11,10 @@ const Button = ({ color, onClick, text }) => {
   //   props.color === "red" && styles.mainRedColor,
   // ].join(" ");
 
+  const theme = useTheme();
+
   return (
-    <button css={styles.button({ color })} onClick={onClick}>
+    <button css={styles.button({ color, theme })} onClick={onClick}>
       {text}
     </button>
   );

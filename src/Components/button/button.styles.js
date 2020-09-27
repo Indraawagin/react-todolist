@@ -2,16 +2,19 @@ import { css } from "@emotion/core";
 
 export const button = (props) => {
   let textColor;
+  const {
+    color: { primary },
+  } = props.theme;
 
   switch (props.color) {
     case "black":
-      textColor = "#26292d";
+      textColor = primary.black;
       break;
     case "red":
-      textColor = "#f11c1f";
+      textColor = primary.red;
       break;
     default:
-      textColor = "#26292d";
+      textColor = primary.black;
       break;
   }
 
