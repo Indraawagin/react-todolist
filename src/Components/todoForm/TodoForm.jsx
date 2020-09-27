@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import styles from "./TodoForm.module.css";
+// import styles from "./TodoForm.module.css";
+import * as styles from "./TodoForm.styles";
+import { useTheme } from "emotion-theming";
 
 const Todoform = (props) => {
+  const theme = useTheme();
   // todo : Hook Input
   const [inputState, setInputState] = useState("");
 
@@ -29,16 +32,16 @@ const Todoform = (props) => {
   }
 
   return (
-    <section className={styles.add}>
-      <form action="" className={styles.addForm} onSubmit={handleFormSumbit}>
+    <section css={styles.add}>
+      <form action="" css={styles.addForm} onSubmit={handleFormSumbit}>
         <input
           ref={inputFocus}
           type="text"
-          className={styles.addInput}
+          css={styles.addInput({ theme })}
           value={inputState}
           onChange={(event) => setInputState(event.target.value)}
         />
-        <button className={styles.addBtn}>Add</button>
+        <button css={styles.addBtn({ theme })}>Add</button>
       </form>
     </section>
   );
